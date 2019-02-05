@@ -1,8 +1,8 @@
-create_table "HmReviews", force: :cascade do |t|
+create_table "hm_reviews", force: :cascade do |t|
   t.string "artwork_name"
   t.string "artwork_creator"
   t.string "artwork_review"
-  t.bigint "artwork_point"
+  t.integer "artwork_point"
   t.datetime "created_at", null: false
-  t.timestamp "updated_at", null: false
+  t.datetime "updated_at", null: false
 end

@@ -1,0 +1,47 @@
+<%= form_with(model: hm_review, local: true) do |form| %>
+  <% if hm_review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hm_review.errors.count, "error") %> prohibited this hm_review from being saved:</h2>
+
+      <ul>
+      <% hm_review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :artwork_name %>
+    <%= form.text_field :artwork_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artwork_creator %>
+    <%= form.text_field :artwork_creator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artwork_review %>
+    <%= form.text_field :artwork_review %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artwork_point %>
+    <%= form.number_field :artwork_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_at %>
+    <%= form.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_at %>
+    <%= form.datetime_select :updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

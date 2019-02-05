@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artwork name:</strong>
+  <%= @hm_review.artwork_name %>
+</p>
+
+<p>
+  <strong>Artwork creator:</strong>
+  <%= @hm_review.artwork_creator %>
+</p>
+
+<p>
+  <strong>Artwork review:</strong>
+  <%= @hm_review.artwork_review %>
+</p>
+
+<p>
+  <strong>Artwork point:</strong>
+  <%= @hm_review.artwork_point %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @hm_review.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @hm_review.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_hm_review_path(@hm_review) %> |
+<%= link_to 'Back', hm_reviews_path %>

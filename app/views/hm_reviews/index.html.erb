@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hm Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artwork name</th>
+      <th>Artwork creator</th>
+      <th>Artwork review</th>
+      <th>Artwork point</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hm_reviews.each do |hm_review| %>
+      <tr>
+        <td><%= hm_review.artwork_name %></td>
+        <td><%= hm_review.artwork_creator %></td>
+        <td><%= hm_review.artwork_review %></td>
+        <td><%= hm_review.artwork_point %></td>
+        <td><%= hm_review.created_at %></td>
+        <td><%= hm_review.updated_at %></td>
+        <td><%= link_to 'Show', hm_review %></td>
+        <td><%= link_to 'Edit', edit_hm_review_path(hm_review) %></td>
+        <td><%= link_to 'Destroy', hm_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hm Review', new_hm_review_path %>
