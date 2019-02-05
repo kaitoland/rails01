@@ -14,11 +14,11 @@ class HmReviewsTest < ApplicationSystemTestCase
     visit hm_reviews_url
     click_on "New Hm Review"
 
-    fill_in "Artwork creator", with: @hm_review.artwork_creator
-    fill_in "Artwork name", with: @hm_review.artwork_name
-    fill_in "Artwork point", with: @hm_review.artwork_point
-    fill_in "Artwork review", with: @hm_review.artwork_review
     fill_in "Created at", with: @hm_review.created_at
+    fill_in "Hm comment", with: @hm_review.hm_comment
+    fill_in "Hm creator", with: @hm_review.hm_creator
+    fill_in "Hm name", with: @hm_review.hm_name
+    fill_in "Hm point", with: @hm_review.hm_point
     fill_in "Updated at", with: @hm_review.updated_at
     click_on "Create Hm review"
 
@@ -30,11 +30,11 @@ class HmReviewsTest < ApplicationSystemTestCase
     visit hm_reviews_url
     click_on "Edit", match: :first
 
-    fill_in "Artwork creator", with: @hm_review.artwork_creator
-    fill_in "Artwork name", with: @hm_review.artwork_name
-    fill_in "Artwork point", with: @hm_review.artwork_point
-    fill_in "Artwork review", with: @hm_review.artwork_review
     fill_in "Created at", with: @hm_review.created_at
+    fill_in "Hm comment", with: @hm_review.hm_comment
+    fill_in "Hm creator", with: @hm_review.hm_creator
+    fill_in "Hm name", with: @hm_review.hm_name
+    fill_in "Hm point", with: @hm_review.hm_point
     fill_in "Updated at", with: @hm_review.updated_at
     click_on "Update Hm review"
 

@@ -1,4 +1,5 @@
 class HmReviewsController < ApplicationController
+  before_action :set_hm_review, only: [:show, :edit, :update, :destroy]
 
   # GET /hm_reviews
   # GET /hm_reviews.json
@@ -9,7 +10,7 @@ class HmReviewsController < ApplicationController
   # GET /hm_reviews/1
   # GET /hm_reviews/1.json
   def show
-    @hm_review = HmReview.find(params[:id]);
+    @hm_review = HmReview.find(params[:id])
   end
 
   # GET /hm_reviews/new
@@ -62,9 +63,13 @@ class HmReviewsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_hm_review
+      @hm_review = HmReview.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hm_review_params
-      params.require(:hm_review).permit(:artwork_name, :artwork_creator, :artwork_review, :artwork_point, :created_at, :updated_at)
+      params.require(:hm_review).permit(:hm_name, :hm_creator, :hm_comment, :hm_point, :created_at, :updated_at)
     end
 end

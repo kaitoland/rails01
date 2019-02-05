@@ -17,7 +17,7 @@ class HmReviewsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create hm_review" do
     assert_difference('HmReview.count') do
-      post hm_reviews_url, params: { hm_review: { artwork_creator: @hm_review.artwork_creator, artwork_name: @hm_review.artwork_name, artwork_point: @hm_review.artwork_point, artwork_review: @hm_review.artwork_review, created_at: @hm_review.created_at, updated_at: @hm_review.updated_at } }
+      post hm_reviews_url, params: { hm_review: { created_at: @hm_review.created_at, hm_comment: @hm_review.hm_comment, hm_creator: @hm_review.hm_creator, hm_name: @hm_review.hm_name, hm_point: @hm_review.hm_point, updated_at: @hm_review.updated_at } }
     end
 
     assert_redirected_to hm_review_url(HmReview.last)
@@ -34,7 +34,7 @@ class HmReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update hm_review" do
-    patch hm_review_url(@hm_review), params: { hm_review: { artwork_creator: @hm_review.artwork_creator, artwork_name: @hm_review.artwork_name, artwork_point: @hm_review.artwork_point, artwork_review: @hm_review.artwork_review, created_at: @hm_review.created_at, updated_at: @hm_review.updated_at } }
+    patch hm_review_url(@hm_review), params: { hm_review: { created_at: @hm_review.created_at, hm_comment: @hm_review.hm_comment, hm_creator: @hm_review.hm_creator, hm_name: @hm_review.hm_name, hm_point: @hm_review.hm_point, updated_at: @hm_review.updated_at } }
     assert_redirected_to hm_review_url(@hm_review)
   end
 

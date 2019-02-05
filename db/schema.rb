@@ -10,22 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_05_152408) do
-
-  create_table "HmReviews", force: :cascade do |t|
-    t.string "artwork_name"
-    t.string "artwork_creator"
-    t.string "artwork_review"
-    t.integer "artwork_point"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_02_05_162137) do
 
   create_table "hm_reviews", force: :cascade do |t|
-    t.string "artwork_name"
-    t.string "artwork_creator"
-    t.string "artwork_review"
-    t.integer "artwork_point"
+    t.string "hm_name"
+    t.string "hm_creator"
+    t.string "hm_comment"
+    t.integer "hm_point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
