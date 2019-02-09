@@ -226,13 +226,13 @@ h1.logo {
   margin-bottom: 15px;
   line-height: 1em;
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: #FF9966;
   font-weight: bold;
 }
 
 #header .secondary-slogan{
   font-size: 1.6em;
-  color: rgba(255,255,255,.5);
+  color: #FF9999;
   line-height: 1em;
   font-family: 'Raleway', sans-serif;
 }
@@ -253,6 +253,9 @@ h1.logo {
     opacity: 1;
 }
 
+.top-fa-color {
+  color: #000080;
+}
 
 /*////////////////////////////////////////////////////////////////////////
 //  03 - Drawer with menu
