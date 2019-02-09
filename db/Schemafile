@@ -1,8 +1,16 @@
 create_table "hm_reviews", force: :cascade do |t|
-  t.string "hm_name"
-  t.string "hm_creator"
-  t.string "hm_comment"
-  t.integer "hm_point"
+  t.string "hm_name", comment: "ハンドメイドの作品名"
+  t.string "hm_creator", comment: "クリエイター名"
+  t.string "hm_comment", comment: "作品に対するコメント"
+  t.integer "hm_point", comment: "何点か"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "creators", force: :cascade do |t|
+  t.string "name", comment: "クリエイター名"
+  t.string "type", comment: "クリエイターのタイプ"
+  t.string "url", comment: "クリエイターのurl"
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
 end
