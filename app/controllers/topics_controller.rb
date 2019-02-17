@@ -13,6 +13,7 @@ class TopicsController < ApplicationController
   def show
       @newResponse = Response.new(:topic_id => params[:id])
       @responses = Response.where(topic_id: params[:id])
+      binding.pry
   end
 
   # GET /topics/new
