@@ -20,3 +20,11 @@ create_table "topics", force: :cascade do |t|
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
 end
+
+create_table "responses", force: :cascade do |t|
+  t.string "topic_id", comment: "トピックid"
+  t.string "name", comment: "タイトル"
+  t.string "body", comment: "本文"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
