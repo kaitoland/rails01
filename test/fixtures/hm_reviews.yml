@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  artwork_name: MyString
-  artwork_creator: MyString
-  artwork_review: MyString
-  artwork_point: 1
-  created_at: 2019-02-06 00:38:38
-  updated_at: 2019-02-06 00:38:38
+  hm_name: MyString
+  hm_creator: MyString
+  hm_comment: MyString
+  hm_point: 
+  created_at: 2019-02-06 01:21:37
+  updated_at: 2019-02-06 01:21:37
 
 two:
-  artwork_name: MyString
-  artwork_creator: MyString
-  artwork_review: MyString
-  artwork_point: 1
-  created_at: 2019-02-06 00:38:38
-  updated_at: 2019-02-06 00:38:38
+  hm_name: MyString
+  hm_creator: MyString
+  hm_comment: MyString
+  hm_point: 
+  created_at: 2019-02-06 01:21:37
+  updated_at: 2019-02-06 01:21:37
