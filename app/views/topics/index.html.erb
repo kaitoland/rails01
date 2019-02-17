@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Topics</h1>
+<h1>スレッド一覧</h1>
 
 <table>
   <thead>
@@ -28,4 +28,11 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<h1>スレッド新規作成</h1>
+<%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
+
+
+<%= link_to 'Home', root_path %>

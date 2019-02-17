@@ -5,11 +5,14 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all
+    @newTopic = Topic.new
   end
 
   # GET /topics/1
   # GET /topics/1.json
   def show
+      @newResponse = Response.new(:topic_id => params[:id])
+      @responses = Response.where(topic_id: params[:id])
   end
 
   # GET /topics/new

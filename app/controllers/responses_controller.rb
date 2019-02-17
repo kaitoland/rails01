@@ -1,5 +1,5 @@
 class ResponsesController < ApplicationController
-  before_action :set_response, only: [:show, :edit, :update, :destroy]
+  before_action only: [:show, :edit, :update, :destroy]
 
   # GET /responses
   # GET /responses.json
@@ -24,17 +24,9 @@ class ResponsesController < ApplicationController
   # POST /responses
   # POST /responses.json
   def create
-    @response = Response.new(response_params)
-
-    respond_to do |format|
-      if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
-        format.json { render :show, status: :created, location: @response }
-      else
-        format.html { render :new }
-        format.json { render json: @response.errors, status: :unprocessable_entity }
-      end
-    end
+    @response = Response.new(params[:response].permit(:topic_id, :name, :body))
+    @response.save
+    redirect_to topic_path(params[:response]['topic_id'])
   end
 
   # PATCH/PUT /responses/1
@@ -62,13 +54,8 @@ class ResponsesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_response
-      @response = Response.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:name, :body, :created_at, :updated_at)
+      params.require(:response).permit(:topic_id,:name, :body, :created_at, :updated_at)
     end
 end
