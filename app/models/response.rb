@@ -1,3 +1,3 @@
 class Response < ApplicationRecord
-  belongs_to :Topic
+  belongs_to :Topic, optional: true
 end
