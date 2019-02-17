@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :topics
   resources :creators
   resources :hm_reviews
   root to:'home#index'

@@ -14,3 +14,9 @@ create_table "creators", force: :cascade do |t|
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
 end
+
+create_table "topics", force: :cascade do |t|
+  t.string "title", comment: "タイトル"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
