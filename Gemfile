@@ -6,7 +6,7 @@ ruby '2.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3','~> 1.3.6'
+#gem 'sqlite3','~> 1.3.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
 end
 
 group :development do
@@ -66,3 +67,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'ridgepole'
 gem 'font-awesome-rails'
 gem 'high_voltage'
+
+group :production do
+  gem 'pg'
+end
